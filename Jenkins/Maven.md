@@ -30,15 +30,15 @@ Jenkins 프로젝트에서는, Maven 을 AWS EC2 ubuntu 서버에 깔지 않고,
 
 * Jenkins 관리 > Global Tool Configuration
 
-![Jenkins Configuration](Img/Jenkins Configuration.PNG)
+![Jenkins Configuration](./Img/Jenkins Configuration.png)
 
 * Maven 설정
 
-![Jenkins Maven Setting](Img/Jenkins maven install.png)
+![Jenkins Maven Setting](./Img/Jenkins maven install.png)
 
 * Jenkins 프로젝트의 구성에서 Build 시 Maven 설정
 
-![Jenkins Build Maven](Img/Jenkins Build Maven.PNG) 
+![Jenkins Build Maven](./Img/Jenkins Build Maven.png) 
 
 **Maven Version** 
 
