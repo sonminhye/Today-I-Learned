@@ -5,7 +5,7 @@
 
 #### 설치방법(ubuntu)
 
-1. 사용가능한 패키지들과 그 버전에 대한 정보 업데이트(설치가능 리스트 업데이트)
+1. **사용가능한 패키지들과 그 버전에 대한 정보 업데이트(설치가능 리스트 업데이트)**
 
 ```bash
 sudo apt-get update
@@ -13,7 +13,9 @@ sudo apt-get update
 
 
 
-2. JDK 설치
+
+
+2. **JDK 설치**
 
 * JDK를 설치한다.
 
@@ -23,7 +25,9 @@ sudo apt-get install openjdk-8-jdk
 
 
 
-3. Jenkins 저장소 Key 다운로드
+
+
+3. **Jenkins 저장소 Key 다운로드**
 
 * This is the Debian package repository of Jenkins to automate installation and upgrade. To use this repository, first add the key to your system
 * 설치와 업그레이드를 자동화해주는 젠킨스의 debain package repository. 이 repository 를 위해 먼저 키를 추가해주어야 한다.
@@ -34,7 +38,9 @@ wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 
 
 
-4. jenkins repository 등록
+
+
+4. **jenkins repository 등록**
 
 * Then add a Jenkins apt repository entry
 
@@ -44,7 +50,9 @@ sudo sh -c 'echo deb https://pkg.jenkins.io/debian binary/ > /etc/apt/sources.li
 
 
 
-5. jenkins 설치
+
+
+5. **jenkins 설치**
 
 ```bash
 sudo apt-get update
@@ -53,7 +61,9 @@ sudo apt-get install jenkins
 
 
 
-6. jenkins 포트 변경
+
+
+6. **jenkins 포트 변경**
 
 - 기본 포트는 8080 으로 잡혀있지만, 보통 톰캣이 8080 포트를 쓰기 때문에 해당 포트를 다른 포트로 바꿔주었다.
 
@@ -69,7 +79,9 @@ sudo vi /etc/default/jenkins
 
 
 
-7. Jenkins 시작
+
+
+7. **Jenkins 시작**
 
 ```bash
 sudo service jenkins restart
@@ -77,7 +89,9 @@ sudo service jenkins restart
 
 
 
-8. Jenkins 초기 비밀번호 입력
+
+
+8. **Jenkins 초기 비밀번호 입력**
 
 ```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
