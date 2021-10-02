@@ -11,6 +11,8 @@
 * 프로젝트 생성 및 테스트 빌드, 배포 등의 작업을 위한 프로그램
 * 빠른 기간 동안 계속해서 늘어나는 라이브러리 추가, 라이브러리 버전의 관리 등을 해결하기 위함
 
+
+
 #### 메이븐 Lifecycle
 
 * 메이븐이 프로젝트를 관리하는 정해진 순서가 존재하며 이를 Lifecycle 이라고 함.
@@ -24,6 +26,36 @@
   * clean install 을 수행하면, install 까지의 과정이 모두 수행됌.
 * **goal**이란, 각 phase들이 실제 수행하는 작업. task를 의미한다.
 
+
+
+#### LifeCycle 별 수행하는 일
+
+##### Clean
+
+* Clean
+  * 생성한 target 폴더 삭제
+
+##### Build
+
+* Compile
+  * 소스를 컴파일해줌. 컴파일 시 target/classes 폴더 생성 및 class파일 생성
+* Test
+  * 테스트코드 실행. target/test-classes 폴더 생성 및 class 파일 생성
+  * target/surefire-reports 폴더에 테스트 결과 기록
+* Package
+  * 해당 프로젝트를 지정한 확장자로 묶어주는 단계
+  * pom.xml에 있는 확장자 타입대로 packaging 을 하며, target 폴더 안에 해당 파일 생성
+* Install
+  * Maven 로컬 리포지토리에 배포
+* deploy
+  * 원격 리포지토리가 있다면, 해당 원격 리포지토리에 배포
+
+##### Site
+
+* 문서 사이트 생성
+
+
+
 ------
 
 Jenkins 프로젝트에서는, Maven 을 AWS EC2 ubuntu 서버에 깔지 않고, Jenkins 에서 maven 을 Install 하도록 설정해주었음.
@@ -32,9 +64,13 @@ Jenkins 프로젝트에서는, Maven 을 AWS EC2 ubuntu 서버에 깔지 않고,
 
 ![Jenkins Configuration](./Img/JenkinsConfiguration.png)
 
+
+
 * Maven 설정
 
 ![Jenkins Maven Setting](./Img/JenkinsMavenInstall.png)
+
+
 
 * Jenkins 프로젝트의 구성에서 Build 시 Maven 설정
 
@@ -51,4 +87,3 @@ Jenkins 프로젝트에서는, Maven 을 AWS EC2 ubuntu 서버에 깔지 않고,
 -DskipTests=true 속성의 경우는, Junit 테스트를 건너뛰겠다는 의미
 
 -DfinalName 의 경우, 최종적으로 만들어지는 war/jar 파일의 이름을 ROOT 로 하겠다는 의미이다.
-
