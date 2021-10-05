@@ -1,7 +1,7 @@
-#### 의존성(Dependency)
+### 의존성(Dependency)
 
 * 어떤 객체가 생성되기 위해 다른 객체가 꼭 필요한 관계를 의존관계라고 함.
-* 한 클래스가 바뀔 때, 다른 클래스에도 영향이 있다. 주로 **new **라는 키워드를 통해 의존관계가 생성된다.
+* 한 클래스가 바뀔 때, 다른 클래스에도 영향이 있다. 주로 **new**라는 키워드를 통해 의존관계가 생성된다.
 
 ```java
 class CoffeeMachine{
@@ -14,7 +14,7 @@ class CoffeeMachine{
 
 
 
-##### 의존성 주입(Dependency Injection)
+#### **의존성 주입(Dependency Injection)**
 
 * new 를 통해 직접 만들어주지 않고 객체에 의존성을 주입해주는 것.
 
@@ -58,7 +58,7 @@ class Order {
 
 
 
-##### 의존성 주입의 장점
+#### **의존성 주입의 장점**
 
 * 객체간의 종속성 및 결합도를 줄일 수 있다.
   * 위의 예시처럼, CoffeeMachine 클래스를 생성할 때 필요한 Water 객체에 HotWater, SpaklingWater객체를 손쉽게 갈아끼워 주입해줄 수 있다.
@@ -68,7 +68,7 @@ class Order {
 
 
 
-##### 의존성 주입의 종류
+#### **의존성 주입의 종류**
 
 * 생성자
 * Setter
@@ -76,7 +76,7 @@ class Order {
 
 
 
-#### IoC(Inversion of Control) - 제어의 역전
+### IoC(Inversion of Control) - 제어의 역전
 
 * 의존성 주입을 하는데, 누군가에게서 **의존성을 주입** 받는 것. 
   * 그 누군가는 바로 **스프링 IoC 컨테이너(Application Context).**
