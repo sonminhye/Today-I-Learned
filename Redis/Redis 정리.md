@@ -64,7 +64,7 @@ spring.redis.port=6379
 
 * 위와 같이, @Cacheable 어노테이션을 통해 캐시를 적용하면, diaryNo#1(key값) 와 같은 형태로 캐시가 등록된 것을 확인할 수 있다.
 
-![keys](img/keys.PNG)
+![keys](img/keys.png)
 
 * 어노테이션 적용 후 두번째 동일한 메서드 호출 시, 쿼리가 콘솔에 표시되지 않았다. (H2 DB 가 아닌 redis 에서 가져온 객체를 표시했다는 것.)
 
