@@ -2,7 +2,7 @@
 
 [DefaultSerializer requires a Serializable payload but received an object of type](https://minholee93.tistory.com/entry/ERROR-DefaultSerializer-requires-a-Serializable-payload-but-received-an-object-of-type)
 
-- @Cacheable 어노테이션을 적용하였는데, 대상객체의 경우,= Serializable 인터페이스를 구현해야 했다.
+- @Cacheable 어노테이션을 적용하였는데, 대상객체의 경우  **Serializable** 인터페이스를 구현해야 했다.
 
 #### 직렬화
 
