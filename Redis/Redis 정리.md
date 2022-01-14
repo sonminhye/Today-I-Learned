@@ -74,6 +74,23 @@ spring.redis.port=6379
 
 
 
+#### Cache Hits
+
+* cache 적용 시, cache 된 데이터 요청 시, 해당 키 값을 잘 찾은 비율이다.
+  * 반대되는 개념은, Cache Misses이다.
+
+redis-cli에서 "info stats"를 입력 후 
+
+![cache hits](img/cache_hits.png)
+
+해당 정보로 cache hits 비율을 계산 가능하다.
+
+* cache hits 비율이 높을수록, 캐시기능을 잘 사용하고 있다는 의미이다. 
+  * 다만, cache hits 비율을 높이고 싶다고 해서 cache를 영구적으로 계속 저장해두면 리소스를 차지해 문제가 생길 수 있다.
+
+* 적절한 ttl 을 설정해, 캐시가 일정한 주기로 만료되어 삭제될 수 있게 관리해주어야 한다. 
+  * ttl 을 어떻게 설정할 것인지 등의 사안에 대해서는 적용할 시스템에 맞게끔 상황에 따라 선택해야할 문제이다.
+
 
 
 참고링크들
