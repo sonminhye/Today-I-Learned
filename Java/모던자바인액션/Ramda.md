@@ -56,7 +56,12 @@ Runnable r = () -> System.out.println("Hello World 1")
 #### 함수형 인터페이스의 종류
 
 * Supplier<T>
+  * 인자를 받지 않고, T타입의 값을 제공하는 함수형 인터페이스
+  * ex) 생성자 함수
 * Consumer<T>
+  * T타입을 받아 아무런 값도 반환하지 않는 함수형 인터페이스
+  * Stream 최종연산자에서 System.out.println 출력 시에도 자주 쓰임.
 * Function<T,R>
+  * T타입을 받아 R타입을 반환하는 함수형 인터페이스
 * Predicate<T> 
-  * 불리언을 반환하는 함수형 인터페이스
+  * T타입을 받아 불리언을 반환하는 함수형 인터페이스
