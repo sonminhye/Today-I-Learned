@@ -56,4 +56,4 @@ brew install opensearch
 
 127.0.0.1:9200 으로 접속
 
-![실행 화면](/Users/sonminhye/Documents/책읽고정리하기/TIL정리/ElasticSearch/opensearch_localexec.png)
+![실행 화면](./opensearch_localexec.png)
